@@ -40,6 +40,8 @@ public class returnBook extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -88,6 +90,7 @@ public class returnBook extends javax.swing.JFrame {
         });
         getContentPane().add(idate, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 152, 130, -1));
 
+        jButton1.setBackground(new java.awt.Color(0, 255, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Return");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +100,7 @@ public class returnBook extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 259, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(0, 255, 102));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Close");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -106,6 +110,7 @@ public class returnBook extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 259, -1, -1));
 
+        jButton3.setBackground(new java.awt.Color(0, 255, 102));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("Search");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -115,8 +120,16 @@ public class returnBook extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 92, -1, -1));
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 51));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("RETURN BOOK");
+        jPanel1.add(jLabel6);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 30));
+
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/10+ Crumpled Paper Texture and Background for Design Project - Graphic Cloud.jpeg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 320));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 310));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -269,6 +282,8 @@ public class returnBook extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField rdate;
     private javax.swing.JTextField stuid;
     // End of variables declaration//GEN-END:variables

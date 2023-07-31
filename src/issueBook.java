@@ -40,6 +40,8 @@ public class issueBook extends javax.swing.JFrame {
         rdate = new com.toedter.calendar.JDateChooser();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,6 +67,7 @@ public class issueBook extends javax.swing.JFrame {
         getContentPane().add(dateofissue, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 152, -1, -1));
         getContentPane().add(rdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 192, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(0, 255, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Issue");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +77,7 @@ public class issueBook extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 241, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(0, 255, 102));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Close");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -82,6 +86,14 @@ public class issueBook extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 241, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(0, 153, 51));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("ISSUE BOOK");
+        jPanel1.add(jLabel6);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 30));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/10+ Crumpled Paper Texture and Background for Design Project - Graphic Cloud.jpeg"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
@@ -179,6 +191,8 @@ public class issueBook extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private com.toedter.calendar.JDateChooser rdate;
     private javax.swing.JTextField sid;
     // End of variables declaration//GEN-END:variables
