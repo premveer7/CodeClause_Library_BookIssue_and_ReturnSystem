@@ -53,19 +53,19 @@ public class Signup extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Password");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setText("Username");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, -1, -1));
 
         jTextField1.setBackground(new java.awt.Color(204, 255, 204));
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 310, 30));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 310, 30));
 
         jPasswordField1.setBackground(new java.awt.Color(204, 255, 204));
         jPasswordField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 310, 30));
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 310, 30));
 
         jLabel4.setBackground(new java.awt.Color(0, 102, 51));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -83,7 +83,7 @@ public class Signup extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/kimberly-farmer-lUaaKCUANVI-unsplash.3.jpg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 560));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
