@@ -1,5 +1,7 @@
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -38,20 +40,26 @@ public class returnBook extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Student ID");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 95, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Issue Date");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 155, 73, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Return Date");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 210, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Book ID");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 48, 57, 26));
 
         boid.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         boid.addActionListener(new java.awt.event.ActionListener() {
@@ -59,6 +67,7 @@ public class returnBook extends javax.swing.JFrame {
                 boidActionPerformed(evt);
             }
         });
+        getContentPane().add(boid, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 48, 130, -1));
 
         stuid.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         stuid.addActionListener(new java.awt.event.ActionListener() {
@@ -66,8 +75,10 @@ public class returnBook extends javax.swing.JFrame {
                 stuidActionPerformed(evt);
             }
         });
+        getContentPane().add(stuid, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 92, 130, -1));
 
         rdate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        getContentPane().add(rdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 207, 130, -1));
 
         idate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         idate.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +86,7 @@ public class returnBook extends javax.swing.JFrame {
                 idateActionPerformed(evt);
             }
         });
+        getContentPane().add(idate, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 152, 130, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Return");
@@ -83,6 +95,7 @@ public class returnBook extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 259, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Close");
@@ -91,6 +104,7 @@ public class returnBook extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 259, -1, -1));
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("Search");
@@ -99,103 +113,76 @@ public class returnBook extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 92, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(84, 84, 84)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(boid, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(stuid, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3))
-                            .addComponent(idate, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rdate, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)))
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(stuid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(idate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(rdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(13, Short.MAX_VALUE))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/10+ Crumpled Paper Texture and Background for Design Project - Graphic Cloud.jpeg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        String bookID=boid.getText();
-        String studentID=stuid.getText();
+//        String bookID=boid.getText().toString();
+//        String studentID=stuid.getText().toString();
+//        System.out.println(bookID);
+//        System.out.println(studentID);
+//        try
+//        {
+//             Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/LMS","root","Premveer7$");
+//         Statement stmt=con.createStatement();
+//      
+//               
+//         ResultSet rs =stmt.executeQuery("SELECT IssueDate,dueDate FROM issue WHERE bookID='"+bookID+"'AND studentID='"+studentID+"'");
+//        
+//         System.out.println( rs);
+//        if(rs.next())
+//        {
+//            
+//            System.out.println( rs.getString("IssueDate"));   
+//          idate.setText(rs.getString("IssueDate"));
+//           rdate.setText(rs.getString("dueDate"));
+//        boid.setEditable(false);
+//         stuid.setEditable(false);
+//        }
+//        else{
+//             JOptionPane.showMessageDialog(null,"Incorrect StudentId or Incorrect BookId");
+//             setVisible(false);
+//             new returnBook().setVisible(true);
+//        }
+//        }
+//        catch (Exception e)
+//        {
+//           JOptionPane.showMessageDialog(null,e.getMessage());
+//        }
+ String bookID = boid.getText().toString();
+        String studentID = stuid.getText().toString();
         System.out.println(bookID);
         System.out.println(studentID);
-        try
-        {
-             Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/LMS","root","Premveer7$");
-         Statement stmt=con.createStatement();
-      
-               
-         ResultSet rs =stmt.executeQuery("SELECT IssueDate,dueDate FROM issue WHERE bookID='"+bookID+"'AND studentID='"+studentID+"'");
-         System.out.println( rs.getString("IssueDate"));
-         System.out.println( rs.getString("dueDate"));
-      
-         System.out.println( rs);
-        if(rs.next())
-        {
-            
-            System.out.println( rs.getString("IssueDate"));
-      
-            idate.setText(rs.getString("IssueDate"));
-            rdate.setText(rs.getString("dueDate"));
-            boid.setEditable(false);
-            stuid.setEditable(false);
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LMS", "root", "Premveer7$");
+            Statement stmt = con.createStatement();
+            String query = "SELECT IssueDate, dueDate FROM issue WHERE bookID=" + bookID + " AND studentID=" + studentID + "";
+            System.out.println("Query: " + query);
+
+            ResultSet rs = stmt.executeQuery(query);
+            System.out.println(rs);
+            if (rs.next()) {
+                SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
+                System.out.println(dFormat.parse(rs.getString("IssueDate")));
+                idate.setText(rs.getString("IssueDate"));
+                rdate.setText(rs.getString("dueDate"));
+                boid.setEditable(false);
+                stuid.setEditable(false);
+            } else {
+                JOptionPane.showMessageDialog(null, "Incorrect StudentId or Incorrect BookId");
+                setVisible(false);
+                new returnBook().setVisible(true);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
-        else{
-             JOptionPane.showMessageDialog(null,"Incorrect StudentId or Incorrect BookId");
-             setVisible(false);
-             new returnBook().setVisible(true);
-        }
-        }
-        catch (Exception e)
-        {
-           JOptionPane.showMessageDialog(null,e.getMessage());
-        }
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -207,7 +194,7 @@ public class returnBook extends javax.swing.JFrame {
         {
              Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/LMS","root","Premveer7$");
          Statement stmt=con.createStatement();
-        stmt.executeUpdate("update issue set returnBook='YES' where studentID='"+studentID+"' and bookID='"+bookID+"'");
+        stmt.executeUpdate("update issue set bookReturned='YES' where studentID='"+studentID+"' and bookID='"+bookID+"'");
         JOptionPane.showMessageDialog(null,"Book Successfully Returned");
          setVisible(false);
              new returnBook().setVisible(true);
@@ -281,6 +268,7 @@ public class returnBook extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField rdate;
     private javax.swing.JTextField stuid;
     // End of variables declaration//GEN-END:variables

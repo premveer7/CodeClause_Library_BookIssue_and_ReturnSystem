@@ -1,4 +1,5 @@
 import java.sql.*;
+import javax.swing.*;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 
@@ -35,24 +36,34 @@ public class issueBook extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         sid = new javax.swing.JTextField();
         bid = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        dateofissue = new com.toedter.calendar.JDateChooser();
+        rdate = new com.toedter.calendar.JDateChooser();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Student ID");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 105, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Book ID");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 55, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Issue Date");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 152, 82, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Return Date");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 194, -1, -1));
+        getContentPane().add(sid, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 105, 96, -1));
+        getContentPane().add(bid, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 55, 96, -1));
+        getContentPane().add(dateofissue, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 152, -1, -1));
+        getContentPane().add(rdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 192, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Issue");
@@ -61,6 +72,7 @@ public class issueBook extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 241, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Close");
@@ -69,62 +81,10 @@ public class issueBook extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 241, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bid, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(sid, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(75, 75, 75))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(55, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(sid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(32, 32, 32))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/10+ Crumpled Paper Texture and Background for Design Project - Graphic Cloud.jpeg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -136,46 +96,42 @@ public class issueBook extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        SimpleDateFormat dFormat=new SimpleDateFormat("dd-mm-yy");
-        String bookID=bid.getText();
-        String StudentID=sid.getText();
-        String issueDate=dFormat.format(jDateChooser1.getDate());
-        String dueDate=dFormat.format(jDateChooser2.getDate());
-        String bookReturned="No";
+        // TODO add your handling code here:
+        
+          SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String bookID = bid.getText().toString();
+        String StudentID = sid.getText().toString();
+        String issueDate = dFormat.format(dateofissue.getDate());
+        String dueDate = dFormat.format(rdate.getDate());
+        String bookReturned = "No";
         System.out.println(issueDate);
         System.out.println(dueDate);
         System.out.println(issueDate);
-        System.out.println(jDateChooser1.getDate());
-        
-        
-        
-        
-        try{
-        Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/LMS","root","Premveer7$");
-         Statement stmt=con.createStatement();
-        ResultSet rs =stmt.executeQuery("select * from book where bookID='"+bookID+"'");
-        if(rs.next())
-        {
-            ResultSet rs1 =stmt.executeQuery("select * from student where studentID='"+StudentID+"'");
-            if(rs1.next())
-            {
-             stmt.executeUpdate("insert into issue values('"+bookID+"',' "+StudentID+"','"+issueDate+"','"+dueDate+"','"+bookReturned+"')");   
-             JOptionPane.showMessageDialog(null,"Book Successfully Issued");
-              setVisible(false);
-         new issueBook().setVisible(true);
-            }
-            else
-                JOptionPane.showMessageDialog(null,"Incorrect StudentID");
-            
-        }
-        else
-         JOptionPane.showMessageDialog(null,"Incoorect BookID");
+        System.out.println(dateofissue.getDate());
 
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/LMS", "root", "Premveer7$");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from book where bookID='" + bookID + "'");
+            if (rs.next()) {
+                ResultSet rs1 = stmt.executeQuery("select * from student where studentID='" + StudentID + "'");
+                if (rs1.next()) {
+                    stmt.executeUpdate("insert into issue values('" + bookID + "',' " + StudentID + "','" + issueDate + "','" + dueDate + "','" + bookReturned + "')");
+                    JOptionPane.showMessageDialog(null, "Book Successfully Issued");
+                    setVisible(false);
+                    new issueBook().setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Incorrect StudentID");
+                }
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Incoorect BookID");
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
-        catch (Exception e)
-        {
-             JOptionPane.showMessageDialog(null,e.getMessage());
-        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -215,14 +171,15 @@ public class issueBook extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField bid;
+    private com.toedter.calendar.JDateChooser dateofissue;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private com.toedter.calendar.JDateChooser rdate;
     private javax.swing.JTextField sid;
     // End of variables declaration//GEN-END:variables
 }
