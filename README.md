@@ -15,11 +15,7 @@ A desktop-based **Library Book Issue and Return System** developed using **Java 
 - Java
 - Java Swing (GUI)
 - Object-Oriented Programming (OOP)
-
-## 🖼️ Screenshots
-
-> *(Add screenshots of the interface if available here)*
-
+- 
 ## 🚀 How to Run
 
 1. Clone the repository:
