@@ -22,5 +22,4 @@ A desktop-based **Library Book Issue and Return System** developed using **Java 
    ```bash
    git clone https://github.com/Premveer-Analytics/Library_BookIssue_and_ReturnSystem.git
 
-2.Open the project in a Java IDE (e.g., IntelliJ IDEA, Eclipse)
-3.Run the Main class or the GUI frame file to launch the application
+2.Open the project in a Java IDE (e.g., IntelliJ IDEA, Eclipse) and run the Main class or the GUI frame file to launch the application
